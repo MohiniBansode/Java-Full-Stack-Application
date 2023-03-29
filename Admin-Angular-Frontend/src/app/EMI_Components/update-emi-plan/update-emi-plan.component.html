@@ -1,0 +1,22 @@
+<div class = "col-md-6 offset-md-3">
+    <h3>Update EMI Plan</h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class = "form-group">
+            <label>Vehicle Name</label>
+            <input type = "text" class = "form-control" id = "vehicleName" [(ngModel)] = "emiplan.vehicleName" name = "vehicleName" required>
+        </div>
+        
+        <div class = "form-group">
+            <label>Loan Amount</label>
+            <input type = "number" class = "form-control" id = "loanAmount" [(ngModel)] = "emiplan.loanAmount" name = "loanAmount" required>
+        </div>
+        
+        <div class = "form-group">
+            <label>Maximum Tenure in Months</label>
+            <input type = "number" class = "form-control" id = "maximumTenure" [(ngModel)] = "emiplan.maximumTenure" name = "maximumTenure" required>
+        </div>
+        <br>
+        <button class = "btn btn-success" type = "submit">Submit</button>
+    </form>
+    </div>

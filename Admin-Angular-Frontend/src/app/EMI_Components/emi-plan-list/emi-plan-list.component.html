@@ -1,0 +1,23 @@
+<h2> EMI Plan List </h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Vehicle Name </th>
+            <th> Loan Amount </th>
+            <th> Maximum Tenure in Months</th>
+            <th> Action </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let emiplan of emiplans">
+            <td> {{emiplan.vehicleName}} </td>
+            <td> {{emiplan.loanAmount}} </td>
+            <td> {{emiplan.maximumTenure}} </td>
+            <td>
+                <button (click) = "updateEmiPlan(emiplan.id)" class = "btn btn-info">Update</button>
+                <button (click) = "deleteEmiPlan(emiplan.id)" class = "btn btn-danger" style = "margin-left: 10px">Delete</button>
+                <button (click) = "viewEmiPlanDetails(emiplan.id)" class = "btn btn-info" style = "margin-left: 10px">View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
